@@ -656,7 +656,7 @@
   width: 330px;
   height: 470px;
 
-  flex: 0 0 330px;
+  flex-shrink: 0;
 
   overflow: hidden;
 
@@ -970,9 +970,7 @@
 
 @media (max-width: 900px) {
 
-  /* =========================
-     SERVICES
-  ========================= */
+  /* SERVICES */
 
   .services-section {
     padding: 110px 5% 80px;
@@ -1020,9 +1018,7 @@
   }
 
 
-  /* =========================
-     PROCESS
-  ========================= */
+  /* PROCESS */
 
   .process-section {
     padding: 110px 5% 80px;
@@ -1047,8 +1043,6 @@
     width: 300px;
 
     height: 440px;
-
-    flex: 0 0 300px;
   }
 
 
@@ -1079,15 +1073,8 @@
   }
 
 
-  .services-container {
-    width: 100%;
-  }
-
-
   .services-header {
     margin-bottom: 55px;
-
-    gap: 25px;
   }
 
 
@@ -1103,16 +1090,12 @@
   .services-header h2 {
     font-size: 50px;
 
-    line-height: 0.95;
-
     letter-spacing: -3px;
   }
 
 
   .services-intro {
     gap: 12px;
-
-    width: 100%;
   }
 
 
@@ -1124,24 +1107,18 @@
 
 
   .services-intro p {
-    max-width: none;
-
     font-size: 11px;
 
     line-height: 1.8;
   }
 
 
-  /* =========================
-     ONE CARD PER ROW
-  ========================= */
+  /* ONE CARD PER ROW */
 
   .services-list {
     grid-template-columns: 1fr;
 
     gap: 18px;
-
-    width: 100%;
   }
 
 
@@ -1149,8 +1126,6 @@
     width: 100%;
 
     aspect-ratio: 1 / 1;
-
-    min-height: 0;
 
     margin: 0;
   }
@@ -1237,15 +1212,8 @@
   }
 
 
-  .process-container {
-    width: 100%;
-  }
-
-
   .process-header {
     margin-bottom: 45px;
-
-    gap: 25px;
   }
 
 
@@ -1261,16 +1229,12 @@
   .process-header h2 {
     font-size: 50px;
 
-    line-height: 0.95;
-
     letter-spacing: -3px;
   }
 
 
   .process-intro {
     gap: 12px;
-
-    width: 100%;
   }
 
 
@@ -1282,58 +1246,38 @@
 
 
   .process-intro p {
-    max-width: none;
-
     font-size: 11px;
 
     line-height: 1.8;
   }
 
 
-  /* =========================
-     HORIZONTAL PROCESS SCROLL
-  ========================= */
+  /* HORIZONTAL SCROLL */
 
   .process-scroll {
-    width: 100%;
+    width: calc(100vw - 20px);
 
     overflow-x: auto;
-    overflow-y: hidden;
 
     padding: 10px 0 25px;
 
     scrollbar-width: none;
-
-    -webkit-overflow-scrolling: touch;
-  }
-
-
-  .process-scroll::-webkit-scrollbar {
-    display: none;
   }
 
 
   .process-track {
-    display: flex;
-
     gap: 14px;
 
-    width: max-content;
-
-    padding-right: 40px;
+    padding-right: 50px;
   }
 
 
-  /* =========================
-     PROCESS CARD
-  ========================= */
+  /* PROCESS CARD */
 
   .process-card {
     width: 275px;
 
     height: 400px;
-
-    flex: 0 0 275px;
   }
 
 
@@ -1352,17 +1296,11 @@
 
 
   .process-card h3 {
-    max-width: 230px;
-
     font-size: 25px;
-
-    line-height: 1.05;
   }
 
 
   .process-card p {
-    max-width: 230px;
-
     font-size: 10px;
 
     line-height: 1.7;
@@ -1371,39 +1309,10 @@
 
   .process-card-footer {
     margin-top: 16px;
-
-    padding-top: 12px;
-
-    font-size: 7px;
-
-    letter-spacing: 1.5px;
   }
 
 
-  .process-number {
-    font-size: 9px;
-
-    letter-spacing: 2.5px;
-  }
-
-
-  .process-label-small {
-    font-size: 7px;
-
-    letter-spacing: 2px;
-  }
-
-
-  .process-card-line {
-    width: 38px;
-
-    margin-bottom: 15px;
-  }
-
-
-  /* =========================
-     SCROLL INDICATOR
-  ========================= */
+  /* SCROLL INDICATOR */
 
   .process-scroll-indicator {
     margin-top: 18px;
@@ -1432,9 +1341,7 @@
 
 @media (max-width: 380px) {
 
-  /* =========================
-     SERVICES
-  ========================= */
+  /* SERVICES */
 
   .services-section {
     padding: 80px 16px 50px;
@@ -1443,20 +1350,6 @@
 
   .services-header h2 {
     font-size: 44px;
-
-    letter-spacing: -2.5px;
-  }
-
-
-  .services-label {
-    font-size: 11px;
-
-    letter-spacing: 2.5px;
-  }
-
-
-  .services-intro p {
-    font-size: 10px;
   }
 
 
@@ -1484,21 +1377,7 @@
   }
 
 
-  .service-card-top {
-    font-size: 7px;
-
-    letter-spacing: 2px;
-  }
-
-
-  .service-arrow {
-    font-size: 16px;
-  }
-
-
-  /* =========================
-     PROCESS
-  ========================= */
+  /* PROCESS */
 
   .process-section {
     padding: 80px 16px 50px;
@@ -1507,27 +1386,6 @@
 
   .process-header h2 {
     font-size: 44px;
-
-    letter-spacing: -2.5px;
-  }
-
-
-  .process-label {
-    font-size: 11px;
-
-    letter-spacing: 2.5px;
-  }
-
-
-  .process-intro p {
-    font-size: 10px;
-  }
-
-
-  .process-track {
-    gap: 12px;
-
-    padding-right: 30px;
   }
 
 
@@ -1535,8 +1393,6 @@
     width: 265px;
 
     height: 390px;
-
-    flex: 0 0 265px;
   }
 
 
@@ -1546,15 +1402,11 @@
 
 
   .process-card h3 {
-    max-width: 220px;
-
     font-size: 23px;
   }
 
 
   .process-card p {
-    max-width: 220px;
-
     font-size: 9px;
   }
 
@@ -1565,68 +1417,6 @@
     top: 15px;
 
     right: 15px;
-  }
-
-
-  .process-card-footer {
-    font-size: 6.5px;
-
-    letter-spacing: 1.2px;
-  }
-
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE — 350px
-========================================================= */
-
-@media (max-width: 350px) {
-
-  .services-section,
-  .process-section {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-
-  .services-header h2,
-  .process-header h2 {
-    font-size: 40px;
-  }
-
-
-  .service-card-content {
-    padding: 18px;
-  }
-
-
-  .service-card-content h3 {
-    font-size: 22px;
-  }
-
-
-  .process-card {
-    width: 250px;
-
-    flex-basis: 250px;
-
-    height: 380px;
-  }
-
-
-  .process-card-content {
-    padding: 18px;
-  }
-
-
-  .process-card h3 {
-    font-size: 21px;
-  }
-
-
-  .process-card p {
-    font-size: 8.5px;
   }
 
 }
@@ -1661,6 +1451,38 @@
   .service-card:hover .service-image img,
   .process-card:hover .process-card-image img {
     transform: none;
+  }
+
+}/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .process-card {
+    flex: 0 0 300px;
+  }
+
+  .process-card-image {
+    height: 220px;
+  }
+
+  .process-big-number {
+    font-size: 55px;
+    left: 16px;
+    bottom: 12px;
+  }
+
+  .process-card-content {
+    padding: 20px;
+  }
+
+  .process-card-content h3 {
+    font-size: 21px;
+  }
+
+  .process-card-content p {
+    font-size: 13px;
   }
 
 }
