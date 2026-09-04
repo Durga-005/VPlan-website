@@ -1,0 +1,1488 @@
+/* =========================================================
+   V PLAN — SERVICES + PROCESS
+   Complete Responsive CSS
+========================================================= */
+
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-section {
+  position: relative;
+  background: #58462c;
+  color: #ffffff;
+  padding: 150px 6% 100px;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SERVICES BACKGROUND GRID
+========================================================= */
+
+.services-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.13;
+
+  background-image:
+    linear-gradient(
+      rgba(201, 181, 138, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(201, 181, 138, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+}
+
+
+/* =========================================================
+   SERVICES CONTAINER
+========================================================= */
+
+.services-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SERVICES HEADER
+========================================================= */
+
+.services-header {
+  display: grid;
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 80px;
+  align-items: end;
+
+  margin-bottom: 90px;
+}
+
+
+.services-label {
+  margin: 0 0 22px;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  color: #c9b58a;
+}
+
+
+.services-header h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 85px);
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -4px;
+}
+
+
+.services-header h2 span {
+  color: #c9b58a;
+}
+
+
+/* =========================================================
+   SERVICES INTRO
+========================================================= */
+
+.services-intro {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+}
+
+
+.services-intro-line {
+  width: 30px;
+  height: 1px;
+
+  margin-top: 9px;
+
+  flex-shrink: 0;
+
+  background: #c9b58a;
+}
+
+
+.services-intro p {
+  max-width: 290px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.8;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   SERVICES CARD GRID
+========================================================= */
+
+.services-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+  position: relative;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #151b20;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.service-card-1,
+.service-card-2,
+.service-card-3,
+.service-card-4,
+.service-card-5 {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(201, 181, 138, 0.7);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+========================================================= */
+
+.service-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   SERVICE IMAGE OVERLAY
+========================================================= */
+
+.service-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 8, 12, 0.97) 0%,
+      rgba(5, 8, 12, 0.82) 35%,
+      rgba(5, 8, 12, 0.35) 65%,
+      rgba(5, 8, 12, 0.08) 100%
+    );
+}
+
+
+/* =========================================================
+   SERVICE BIG NUMBER
+========================================================= */
+
+.service-big-number {
+  position: absolute;
+
+  top: 20px;
+  right: 22px;
+
+  z-index: 2;
+
+  font-size: 80px;
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.16);
+
+  pointer-events: none;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.service-card:hover .service-big-number {
+  color: rgba(201, 181, 138, 0.28);
+
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   SERVICE CARD CONTENT
+========================================================= */
+
+.service-card-content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 3;
+
+  padding: 30px;
+}
+
+
+/* =========================================================
+   SERVICE CARD TOP
+========================================================= */
+
+.service-card-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #c9b58a;
+}
+
+
+/* =========================================================
+   SERVICE CARD TITLE
+========================================================= */
+
+.service-card-content h3 {
+  max-width: 90%;
+
+  margin: 0;
+
+  font-size: clamp(24px, 2.5vw, 34px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   SERVICE CARD DESCRIPTION
+========================================================= */
+
+.service-card-content p {
+  max-width: 95%;
+
+  margin: 12px 0 0;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================================
+   SERVICE ARROW
+========================================================= */
+
+.service-arrow {
+  font-size: 20px;
+
+  color: #c9b58a;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+
+.service-card:hover .service-arrow {
+  transform: translate(5px, -5px);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICE GOLD LINE
+========================================================= */
+
+.service-line {
+  width: 0;
+  height: 1px;
+
+  margin-top: 18px;
+
+  background: #c9b58a;
+
+  transition: width 0.5s ease;
+}
+
+
+.service-card:hover .service-line {
+  width: 50px;
+}
+
+
+/* =========================================================
+   SERVICES BOTTOM
+========================================================= */
+
+.services-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 60px;
+}
+
+
+.services-bottom span {
+  width: 80px;
+  height: 1px;
+
+  background: rgba(201, 181, 138, 0.4);
+}
+
+
+.services-bottom p {
+  margin: 0;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
+.process-section {
+  position: relative;
+
+  background: #2b211b;
+
+  color: #ffffff;
+
+  padding: 130px 6% 100px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PROCESS BLUEPRINT GRID
+========================================================= */
+
+.blueprint-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(201, 181, 138, 0.10) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(201, 181, 138, 0.10) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+}
+
+
+.blueprint-grid::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(201, 181, 138, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(201, 181, 138, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 14px 14px;
+}
+
+
+/* =========================================================
+   PROCESS CONTAINER
+========================================================= */
+
+.process-container {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PROCESS HEADER
+========================================================= */
+
+.process-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 75px;
+}
+
+
+.process-label {
+  margin: 0 0 22px;
+
+  font-size: 18px;
+
+  letter-spacing: 4px;
+
+  color: #c9b58a;
+}
+
+
+.process-header h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 85px);
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -4px;
+}
+
+
+.process-header h2 span {
+  color: #c9b58a;
+}
+
+
+/* =========================================================
+   PROCESS INTRO
+========================================================= */
+
+.process-intro {
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+}
+
+
+.process-intro .intro-line {
+  width: 30px;
+  height: 1px;
+
+  margin-top: 9px;
+
+  flex-shrink: 0;
+
+  background: #c9b58a;
+}
+
+
+.process-intro p {
+  max-width: 290px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   PROCESS HORIZONTAL SCROLL
+========================================================= */
+
+.process-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+
+  padding: 10px 0 30px;
+}
+
+
+.process-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+.process-scroll:active {
+  cursor: grabbing;
+}
+
+
+/* =========================================================
+   PROCESS TRACK
+========================================================= */
+
+.process-track {
+  display: flex;
+
+  gap: 22px;
+
+  width: max-content;
+
+  padding-right: 120px;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
+.process-card {
+  position: relative;
+
+  width: 330px;
+  height: 470px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: #111519;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.process-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(201, 181, 138, 0.7);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   PROCESS IMAGE
+========================================================= */
+
+.process-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.process-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.process-card:hover .process-card-image img {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   PROCESS IMAGE OVERLAY
+========================================================= */
+
+.process-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5, 8, 12, 0.18) 0%,
+      rgba(5, 8, 12, 0.08) 25%,
+      rgba(5, 8, 12, 0.38) 48%,
+      rgba(5, 8, 12, 0.78) 72%,
+      rgba(5, 8, 12, 0.98) 100%
+    );
+}
+
+
+/* =========================================================
+   PROCESS BIG NUMBER
+========================================================= */
+
+.process-big-number {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  z-index: 2;
+
+  font-size: 90px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  pointer-events: none;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.process-card:hover .process-big-number {
+  color: rgba(201, 181, 138, 0.30);
+
+  transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   PROCESS CARD CONTENT
+========================================================= */
+
+.process-card-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   PROCESS CARD TOP
+========================================================= */
+
+.process-card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+
+.process-number {
+  color: #c9b58a;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+
+.process-label-small {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   PROCESS GOLD LINE
+========================================================= */
+
+.process-card-line {
+  width: 45px;
+
+  height: 1px;
+
+  margin: 0 0 18px;
+
+  background: #c9b58a;
+
+  transition: width 0.5s ease;
+}
+
+
+.process-card:hover .process-card-line {
+  width: 75px;
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+========================================================= */
+
+.process-card h3 {
+  max-width: 280px;
+
+  margin: 0;
+
+  font-size: 30px;
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   PROCESS DESCRIPTION
+========================================================= */
+
+.process-card p {
+  max-width: 275px;
+
+  margin: 13px 0 0;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================================
+   PROCESS FOOTER
+========================================================= */
+
+.process-card-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 20px;
+
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+.process-card-footer span:first-child {
+  color: #c9b58a;
+}
+
+
+/* =========================================================
+   PROCESS SCROLL INDICATOR
+========================================================= */
+
+.process-scroll-indicator {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}
+
+
+.process-scroll-line {
+  width: 55px;
+
+  height: 1px;
+
+  background: #c9b58a;
+}
+
+
+.process-arrow {
+  color: #c9b58a;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.process-scroll-indicator:hover .process-arrow {
+  transform: translateX(6px);
+}
+
+
+/* =========================================================
+   TABLET — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* SERVICES */
+
+  .services-section {
+    padding: 110px 5% 80px;
+  }
+
+
+  .services-header {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 65px;
+  }
+
+
+  .services-header h2 {
+    font-size: clamp(48px, 9vw, 75px);
+  }
+
+
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+
+  .service-card {
+    aspect-ratio: 1 / 1;
+  }
+
+
+  .service-card-content {
+    padding: 25px;
+  }
+
+
+  .service-big-number {
+    font-size: 70px;
+  }
+
+
+  .service-card-content h3 {
+    font-size: 28px;
+  }
+
+
+  /* PROCESS */
+
+  .process-section {
+    padding: 110px 5% 80px;
+  }
+
+
+  .process-header {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+  }
+
+
+  .process-header h2 {
+    font-size: clamp(48px, 9vw, 75px);
+  }
+
+
+  .process-card {
+    width: 300px;
+
+    height: 440px;
+  }
+
+
+  .process-card-content {
+    padding: 26px;
+  }
+
+
+  .process-big-number {
+    font-size: 80px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* =====================================================
+     SERVICES MOBILE
+  ===================================================== */
+
+  .services-section {
+    padding: 90px 20px 60px;
+  }
+
+
+  .services-header {
+    margin-bottom: 55px;
+  }
+
+
+  .services-label {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .services-header h2 {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .services-intro {
+    gap: 12px;
+  }
+
+
+  .services-intro-line {
+    width: 22px;
+
+    margin-top: 8px;
+  }
+
+
+  .services-intro p {
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+
+  /* ONE CARD PER ROW */
+
+  .services-list {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .service-card {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0;
+  }
+
+
+  .service-card-content {
+    padding: 24px;
+  }
+
+
+  .service-card-content h3 {
+    max-width: 90%;
+
+    font-size: 27px;
+
+    line-height: 1.05;
+  }
+
+
+  .service-card-content p {
+    max-width: 95%;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+  }
+
+
+  .service-big-number {
+    top: 18px;
+
+    right: 18px;
+
+    font-size: 75px;
+  }
+
+
+  .service-card-top {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .service-arrow {
+    font-size: 18px;
+  }
+
+
+  .service-line {
+    margin-top: 16px;
+  }
+
+
+  .services-bottom {
+    gap: 15px;
+
+    margin-top: 45px;
+  }
+
+
+  .services-bottom span {
+    width: 35px;
+  }
+
+
+  .services-bottom p {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =====================================================
+     PROCESS MOBILE
+  ===================================================== */
+
+  .process-section {
+    padding: 90px 20px 60px;
+  }
+
+
+  .process-header {
+    margin-bottom: 45px;
+  }
+
+
+  .process-label {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .process-header h2 {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .process-intro {
+    gap: 12px;
+  }
+
+
+  .process-intro .intro-line {
+    width: 22px;
+
+    margin-top: 8px;
+  }
+
+
+  .process-intro p {
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+
+  /* HORIZONTAL SCROLL */
+
+  .process-scroll {
+    width: calc(100vw - 20px);
+
+    overflow-x: auto;
+
+    padding: 10px 0 25px;
+
+    scrollbar-width: none;
+  }
+
+
+  .process-track {
+    gap: 14px;
+
+    padding-right: 50px;
+  }
+
+
+  /* PROCESS CARD */
+
+  .process-card {
+    width: 275px;
+
+    height: 400px;
+  }
+
+
+  .process-card-content {
+    padding: 23px;
+  }
+
+
+  .process-big-number {
+    top: 18px;
+
+    right: 18px;
+
+    font-size: 72px;
+  }
+
+
+  .process-card h3 {
+    font-size: 25px;
+  }
+
+
+  .process-card p {
+    font-size: 10px;
+
+    line-height: 1.7;
+  }
+
+
+  .process-card-footer {
+    margin-top: 16px;
+  }
+
+
+  /* SCROLL INDICATOR */
+
+  .process-scroll-indicator {
+    margin-top: 18px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .process-scroll-line {
+    width: 35px;
+  }
+
+
+  .process-arrow {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  /* SERVICES */
+
+  .services-section {
+    padding: 80px 16px 50px;
+  }
+
+
+  .services-header h2 {
+    font-size: 44px;
+  }
+
+
+  .service-card-content {
+    padding: 20px;
+  }
+
+
+  .service-card-content h3 {
+    font-size: 24px;
+  }
+
+
+  .service-card-content p {
+    font-size: 9px;
+  }
+
+
+  .service-big-number {
+    top: 15px;
+
+    right: 15px;
+
+    font-size: 65px;
+  }
+
+
+  /* PROCESS */
+
+  .process-section {
+    padding: 80px 16px 50px;
+  }
+
+
+  .process-header h2 {
+    font-size: 44px;
+  }
+
+
+  .process-card {
+    width: 265px;
+
+    height: 390px;
+  }
+
+
+  .process-card-content {
+    padding: 20px;
+  }
+
+
+  .process-card h3 {
+    font-size: 23px;
+  }
+
+
+  .process-card p {
+    font-size: 9px;
+  }
+
+
+  .process-big-number {
+    font-size: 65px;
+
+    top: 15px;
+
+    right: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-card,
+  .service-image img,
+  .service-big-number,
+  .service-arrow,
+  .service-line,
+  .process-card,
+  .process-card-image img,
+  .process-big-number,
+  .process-card-line,
+  .process-arrow {
+    transition: none;
+  }
+
+
+  .service-card:hover,
+  .process-card:hover {
+    transform: none;
+  }
+
+
+  .service-card:hover .service-image img,
+  .process-card:hover .process-card-image img {
+    transform: none;
+  }
+
+}/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .process-card {
+    flex: 0 0 300px;
+  }
+
+  .process-card-image {
+    height: 220px;
+  }
+
+  .process-big-number {
+    font-size: 55px;
+    left: 16px;
+    bottom: 12px;
+  }
+
+  .process-card-content {
+    padding: 20px;
+  }
+
+  .process-card-content h3 {
+    font-size: 21px;
+  }
+
+  .process-card-content p {
+    font-size: 13px;
+  }
+
+}
