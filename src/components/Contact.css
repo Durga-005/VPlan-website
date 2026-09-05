@@ -427,7 +427,7 @@
 
   background: #c9b58a;
 
-  color: #0b0d0f;
+  color: #941b15;
 
   text-decoration: none;
 
@@ -803,6 +803,14 @@
     transition: none !important;
 
     transform: none !important;
+  }
+
+}@media (max-width: 600px) {
+
+  .contact-header h1,
+  .contact-header h1 span,
+  .founder-block h2 {
+    color: #ffffff !important;
   }
 
 }

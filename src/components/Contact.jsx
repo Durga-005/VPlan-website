@@ -201,12 +201,12 @@ const Contact = () => {
           </span>
 
           <a
-            href="mailto:hello@vplan.in?subject=Project%20Enquiry%20-%20V%20PLAN"
-            className="contact-cta"
-          >
-            START A PROJECT
-            <i className="bx bx-right-arrow-alt"></i>
-          </a>
+  href="#contact"
+  className="contact-cta"
+>
+  START A PROJECT
+  <i className="bx bx-right-arrow-alt"></i>
+</a>
 
         </div>
 
