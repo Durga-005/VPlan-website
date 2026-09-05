@@ -83,9 +83,9 @@ a {
 }
 
 .logo-image {
-  width: 360px;
+  width: 420px;
   height: auto;
-  max-height: 90px;
+  max-height: 100px;
   object-fit: contain;
   display: block;
   transition:
