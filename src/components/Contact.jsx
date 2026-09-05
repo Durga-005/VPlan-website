@@ -105,11 +105,9 @@ const Contact = () => {
 
             {/* EMAIL */}
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@vplaninterior.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-detail contact-reveal"
-                >
+  href="mailto:connect@vplaninterior.com"
+  className="contact-detail contact-reveal"
+>
               <div className="contact-icon">
                 <i className="bx bx-envelope"></i>
               </div>
