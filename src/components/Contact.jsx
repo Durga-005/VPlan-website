@@ -105,7 +105,7 @@ const Contact = () => {
 
             {/* EMAIL */}
             <a
-  href="mailto:connect@vplaninterior.com"
+  href="mailto: connect@vplaninterior.com"
   className="contact-detail contact-reveal"
 >
               <div className="contact-icon">
