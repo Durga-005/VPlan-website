@@ -746,8 +746,9 @@ a {
   }
 
   .logo-image {
-    width: 260px;
-    max-height: 68px;
+    width: 220px !important;
+    height: auto !important;
+    max-height: 65px !important;
   }
 
   /* MOBILE MENU */
