@@ -118,7 +118,7 @@ const Contact = () => {
                 </span>
 
                 <span className="contact-value">
-                  hello@vplan.in
+                  connect@vplaninterior.com
                 </span>
 
                 <span className="contact-action-text">
