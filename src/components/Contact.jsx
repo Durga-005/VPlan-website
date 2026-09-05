@@ -105,9 +105,11 @@ const Contact = () => {
 
             {/* EMAIL */}
             <a
-              href="mailto:hello@vplan.in"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@vplaninterior.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="contact-detail contact-reveal"
-            >
+                >
               <div className="contact-icon">
                 <i className="bx bx-envelope"></i>
               </div>
@@ -129,30 +131,31 @@ const Contact = () => {
 
 
             {/* LOCATION */}
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Hyderabad%2C%20India"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-detail contact-reveal"
-            >
-              <div className="contact-icon">
-                <i className="bx bx-map"></i>
-              </div>
+            {/* LOCATION */}
+<a
+  href="https://maps.app.goo.gl/BErqv7CWq36oe8L16"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="contact-detail contact-reveal"
+>
+  <div className="contact-icon">
+    <i className="bx bx-map"></i>
+  </div>
 
-              <div className="contact-info">
-                <span className="contact-label">
-                  LOCATION
-                </span>
+  <div className="contact-info">
+    <span className="contact-label">
+      LOCATION
+    </span>
 
-                <span className="contact-value">
-                  Hyderabad, India
-                </span>
+    <span className="contact-value">
+       Secunderabad, Telangana, India
+    </span>
 
-                <span className="contact-action-text">
-                  View location
-                </span>
-              </div>
-            </a>
+    <span className="contact-action-text">
+      View location
+    </span>
+  </div>
+</a>
 
 
             {/* SOCIAL */}
