@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/logo-removebg-preview.png";
 
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -35,9 +36,14 @@ function Navbar() {
           Services
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
-          Contact
+        <a href="#gallery" onClick={closeMenu}>
+           Gallery
         </a>
+
+        <a href="#contact" onClick={closeMenu}>
+           Contact
+        </a>
+        
 
       </nav>
 

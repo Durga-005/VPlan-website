@@ -1,0 +1,461 @@
+/* =========================================================
+   V PLAN - GALLERY
+   ========================================================= */
+
+.gallery-page {
+  min-height: 100vh;
+  padding: 140px 7% 100px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(201, 181, 138, 0.08), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(201, 181, 138, 0.05), transparent 30%),
+    #0b0d0f;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.gallery-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.gallery-label {
+  margin-bottom: 15px;
+  color: #c9b58a;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.gallery-header h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.gallery-description {
+  max-width: 550px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GALLERY GRID
+   ========================================================= */
+
+.gallery-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================================================
+   GALLERY ITEM
+   ========================================================= */
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+  border-radius: 14px;
+
+  background: #151719;
+  border: 1px solid rgba(201, 181, 138, 0.18);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+/* Gold line at bottom */
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #c9b58a;
+
+  transition: width 0.45s ease;
+}
+
+/* Hover */
+
+.gallery-item:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(201, 181, 138, 0.55);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-item:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.82);
+}
+
+/* =========================================================
+   VIDEOS
+   ========================================================= */
+
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  background: #111;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+/*
+   Video does NOT autoplay.
+   It stays like a project thumbnail until clicked.
+*/
+
+.gallery-item:hover video {
+  transform: scale(1.06);
+  filter: brightness(0.82);
+}
+
+/* =========================================================
+   VIDEO PLAY INDICATOR
+   ========================================================= */
+
+.gallery-item:has(video)::before {
+  content: "▶";
+
+  position: absolute;
+  z-index: 3;
+
+  left: 50%;
+  top: 50%;
+
+  width: 58px;
+  height: 58px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 3px;
+
+  border-radius: 50%;
+
+  color: #0b0d0f;
+  background: rgba(201, 181, 138, 0.92);
+
+  font-size: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.gallery-item:has(video):hover::before {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #ffffff;
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.gallery-lightbox {
+  position: fixed;
+  z-index: 9999;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  animation: lightboxFade 0.3s ease;
+}
+
+/* Image */
+
+.gallery-lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.7);
+
+  animation: lightboxZoom 0.35s ease;
+}
+
+/* Video */
+
+.gallery-lightbox video {
+  max-width: 92vw;
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  border-radius: 8px;
+
+  background: #000;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.7);
+
+  animation: lightboxZoom 0.35s ease;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.lightbox-close {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201, 181, 138, 0.4);
+  border-radius: 50%;
+
+  background: rgba(20, 20, 20, 0.75);
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: #c9b58a;
+  color: #0b0d0f;
+
+  border-color: #c9b58a;
+
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes lightboxFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightboxZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .gallery-page {
+    padding: 120px 5% 80px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-header {
+    margin-bottom: 50px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .gallery-page {
+    padding: 105px 18px 65px;
+  }
+
+  .gallery-header {
+    margin-bottom: 38px;
+  }
+
+  .gallery-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .gallery-header h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .gallery-description {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-3px);
+  }
+
+  .gallery-item:hover img,
+  .gallery-item:hover video {
+    transform: scale(1.03);
+  }
+
+  .gallery-item:has(video)::before {
+    width: 52px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .gallery-lightbox {
+    padding: 20px;
+  }
+
+  .gallery-lightbox img,
+  .gallery-lightbox video {
+    max-width: 94vw;
+    max-height: 78vh;
+    border-radius: 6px;
+  }
+
+  .lightbox-close {
+    top: 18px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 26px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .gallery-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .gallery-header h1 {
+    font-size: 36px;
+  }
+
+  .gallery-grid {
+    gap: 14px;
+  }
+}
