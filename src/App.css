@@ -1072,10 +1072,11 @@ a {
   }
 
   .logo-image {
-  width: 170px !important;
-  max-width: 72vw;
+  width: 190px !important;
+  max-width: 78vw;
   height: auto !important;
-  max-height: 62px !important;
+  max-height: 68px !important;
+  margin-left: -20px;
 }
   /* MOBILE MENU */
 
