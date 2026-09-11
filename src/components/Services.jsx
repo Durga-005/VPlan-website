@@ -195,9 +195,9 @@ function Services() {
               </p>
 
               <h2>
-                Spaces
+                Designing spaces
                 <br />
-                <span>with purpose.</span>
+                <span>that matter.</span>
               </h2>
 
             </div>
