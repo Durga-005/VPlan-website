@@ -167,7 +167,7 @@ const Contact = () => {
 
                 {/* INSTAGRAM */}
                 <a
-                  href="https://www.instagram.com/yourusername/"
+                  href="https://www.instagram.com/vplan_interiors/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
