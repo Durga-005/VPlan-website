@@ -167,13 +167,13 @@ const Contact = () => {
 
                 {/* INSTAGRAM */}
                 <a
-                  href="https://www.instagram.com/vplan_interiors/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <i className="bx bxl-instagram"></i>
-                </a>
+  href="https://www.instagram.com/vplan_interiors/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+>
+  <i className="bx bxl-instagram"></i>
+</a>
 
 
                 {/* WHATSAPP */}
