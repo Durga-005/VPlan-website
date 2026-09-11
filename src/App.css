@@ -1076,6 +1076,7 @@ a {
   max-width: 72vw;
   height: auto !important;
   max-height: 62px !important;
+  margin-left: -10px;
 }
   /* MOBILE MENU */
 
