@@ -1072,11 +1072,11 @@ a {
   }
 
   .logo-image {
-    width: 140px !important;
-    max-width: 65vw;
-    height: auto !important;
-    max-height: 52px !important;
-  }
+  width: 275px !important;
+  max-width: calc(100vw - 75px) !important;
+  height: auto !important;
+  max-height: 64px !important;
+}
 
   /* MOBILE MENU */
 
@@ -1280,9 +1280,11 @@ a {
   }
 
   .logo-image {
-    width: 125px !important;
-    max-width: 60vw;
-  }
+  width: 245px !important;
+  max-width: calc(100vw - 70px) !important;
+  height: auto !important;
+  max-height: 58px !important;
+}
 
   .menu-toggle {
     width: 40px;
