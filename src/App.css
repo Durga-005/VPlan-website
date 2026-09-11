@@ -1326,8 +1326,7 @@ a {
     font-size: 5px;
     letter-spacing: 1.5px;
   }
-}
-@media (max-width: 600px) {
+}@media (max-width: 600px) {
   .logo-image {
     width: 250px !important;
     max-width: 75vw;
