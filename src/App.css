@@ -641,42 +641,151 @@ a {
 }
 
 /* =========================================================
-   FLOAT ANIMATIONS
+   SMOOTH PREMIUM FLOAT ANIMATIONS
+========================================================= */
+
+.image-one {
+  animation: floatOne 9s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.image-two {
+  animation: floatTwo 11s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.image-three {
+  animation: floatThree 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+
+/* =========================================================
+   LEFT IMAGE
 ========================================================= */
 
 @keyframes floatOne {
-  0%,
-  100% {
-    transform: translateY(0);
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, -4px, 0);
   }
 
   50% {
-    transform: translateY(-15px);
+    transform: translate3d(0, -9px, 0);
   }
+
+  75% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
 }
+
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
 
 @keyframes floatTwo {
-  0%,
-  100% {
-    transform: translateY(0);
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, 4px, 0);
   }
 
   50% {
-    transform: translateY(15px);
+    transform: translate3d(0, 9px, 0);
   }
+
+  75% {
+    transform: translate3d(0, 4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
 }
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
 
 @keyframes floatThree {
-  0%,
-  100% {
-    transform: translateY(0);
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, -3px, 0);
   }
 
   50% {
-    transform: translateY(-12px);
+    transform: translate3d(0, -7px, 0);
   }
+
+  75% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
 }
 
+
+/* =========================================================
+   SMOOTH IMAGE HOVER
+========================================================= */
+
+.about-image img {
+  transition:
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-image:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.image-one,
+.image-two,
+.image-three {
+  will-change: transform;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .image-one,
+  .image-two,
+  .image-three {
+    animation: none;
+  }
+
+  .about-image img {
+    transition: none;
+  }
+
+}
 /* =========================================================
    ABOUT CONTENT
 ========================================================= */
